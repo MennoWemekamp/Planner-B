@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner B</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="flex top-bar col-c">
+      <a href="#" class="col-a title">Planner-B</a>
+      <nav class="flex nav-buttons flex-gap">
+        <div class="button col-a">about</div>
+        <div class="button">instruction</div>
+        <div class="button">recipes</div>
+      </nav>
+    </header>
+    <div class="flex main-display flex-gap">
+      <main>
+        <div class="col-c input-display">
+          <div class="flex input-products">
+            <div class="flex flex-gap">
+              <div class="col-a">1</div>
+              <select class="input" id="inp-product" name="inp-product">
+                <option value="">Choose a product</option>
+                <option value="Steel">Steel</option>
+                <option value="Factory">Factory</option>
+                <option value="Mechanical Components">
+                  Mechanical Components
+                </option>
+                <option value="Carbon">Carbon</option>
+                <option value="Road">Road</option>
+              </select>
+              <input
+                placeholder="number"
+                class="input inp-number"
+                type="number"
+                id="imp-number"
+              />
+            </div>
+            <button class="button inp-remove">-</button>
+          </div>
+          <div class="flex flex-gap input-buttons">
+            <button class="button inp-button">add product</button>
+            <button class="button inp-button">reset</button>
+            <button class="button inp-button">calculate</button>
+          </div>
+        </div>
+        <div class="output-display col-c">
+          <!-- probably will be js generated -->
+          <div>
+            <h3>Product 1: Tempered Steel</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">building</th>
+                  <th colspan="2">output</th>
+                  <th colspan="2">inputs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="num-col" rowspan="2">4</td>
+                  <td class="icon-col" rowspan="2">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img"
+                        src="img/Factory.webp"
+                        title="Factory"
+                    /></span>
+                  </td>
+                  <td class="num-col" rowspan="2">310</td>
+                  <td class="icon-col" rowspan="2">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img temp-steel"
+                        src="img/Bar.png"
+                        title="Tempered Steel"
+                    /></span>
+                  </td>
+                  <td class="num-col">104</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img nitrogen"
+                        src="img/Fluid.png"
+                        title="Nitrogen"
+                    /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="num-col">413</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img steel-bar"
+                        src="img/Bar.png"
+                        title="Steel Bar"
+                    /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="num-col">14</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img"
+                        src="img/Factory.webp"
+                        title="Factory"
+                    /></span>
+                  </td>
+                  <td class="num-col">413</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img steel-bar"
+                        src="img/Bar.png"
+                        title="Steel bar"
+                    /></span>
+                  </td>
+                  <td class="num-col">1239</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img iron-ore"
+                        src="img/Ore.png"
+                        title="Iron Ore"
+                    /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="num-col">21</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img"
+                        src="img/Ice_Extractor.png"
+                        title="Ice Extractor"
+                    /></span>
+                  </td>
+                  <td class="num-col">104</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img nitrogen"
+                        src="img/Fluid.png"
+                        title="Nitrogen"
+                    /></span>
+                  </td>
+                  <td colspan="2">Placed on Ice</td>
+                </tr>
+                <tr>
+                  <td class="num-col">83</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img"
+                        src="img/Extractor.png"
+                        title="Extractor"
+                    /></span>
+                  </td>
+                  <td class="num-col">1239</td>
+                  <td class="icon-col">
+                    <span class="icon-span"
+                      ><img
+                        class="icon-img iron-ore"
+                        src="img/Ore.png"
+                        title="Iron Ore"
+                    /></span>
+                  </td>
+                  <td colspan="2">Placed on Iron</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3>Product 2: Tempereder Steel</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>building</th>
+                  <th>recipe</th>
+                  <th>output</th>
+                  <th>inputs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2">Factory x4</td>
+                  <td rowspan="2">Tempered Steel</td>
+                  <td rowspan="2">310</td>
+                  <td>103.2 Nitrogen</td>
+                </tr>
+                <tr>
+                  <td>412.8 Steel bar</td>
+                </tr>
+                <tr>
+                  <td>Factory x14</td>
+                  <td>Steel Bar</td>
+                  <td>412.8</td>
+                  <td>1238.4 Iron ore</td>
+                </tr>
+                <tr>
+                  <td>Ice Extractor x21</td>
+                  <td>Placed on Ice</td>
+                  <td>103.2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Excavator</td>
+                  <td>Placed on Iron</td>
+                  <td>1238.4</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+      <aside class="col-c">
+        <h3>About</h3>
+        <p>
+          This is a calculator to help plan production lines in the game
+          <a href="https://store.steampowered.com/app/1894430/Plan_B_Terraform/"
+            >Plan B: Terraform</a
+          >
+        </p>
+        <p>
+          It allows you to quickly plan out production lines and get an idea of
+          what buildings and resources are needed.
+        </p>
+        <p>
+          It was written by
+          <a href="https://github.com/MennoWemekamp">Menno Wemekamp</a>.
+        </p>
+      </aside>
+    </div>
+  </body>
+</html>

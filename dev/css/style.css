@@ -1,0 +1,237 @@
+/*
+TODO:
+ - make git repo
+ - need to figure out how to deal with the dual output of the metal waste recipe
+ - Information/instruction section should include that waste will be a future feature and is not taken into acount for now.
+
+
+Questions for Josey:
+ -
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(108, 120, 236);
+  --secondary-color: rgb(148, 135, 226);
+  --accent-color: rgb(249, 247, 253);
+  --page-color: rgb(68, 68, 68);
+  --text-accent-color: rgb(238, 0, 0);
+  --h1-color: white;
+  --h2-color: black;
+}
+
+a {
+  color: var(--text-accent-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--text-accent-color);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.col-a {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 700;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
+.input {
+  border: solid 3px var(--secondary-color);
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.input:hover {
+  border: solid 3px var(--primary-color);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: black;
+  text-align: center;
+}
+
+body {
+  background-color: var(--page-color);
+  max-width: 80vw;
+  margin: auto;
+  padding-top: 5px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.title {
+  font-family: "Roboto", sans-serif;
+}
+
+.col-c {
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-gap {
+  gap: 5px;
+}
+
+.top-bar,
+.input-products {
+  justify-content: space-between;
+}
+
+/* ----- HEADER -----*/
+
+.title,
+.title:visited,
+.title:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ----- INPUT ---- */
+
+.inp-number {
+  width: 100px;
+}
+
+.input-buttons {
+  justify-content: center;
+  margin-top: 5px;
+}
+
+main {
+  flex: 1 0;
+}
+
+aside {
+  flex: 0 0 20vw;
+}
+
+.main-display {
+  margin-top: 5px;
+}
+
+.input-display {
+  margin-bottom: 5px;
+}
+
+/* ----- Output ----- */
+
+.output-display h3 {
+  text-align: center;
+  margin-block: 10px;
+  color: var(--primary-color);
+}
+
+.output-display div {
+  border-top: solid 1px var(--page-color);
+  border-left: solid 1px var(--page-color);
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  box-shadow: 2px 2px 2px var(--page-color);
+  margin-bottom: 10px;
+}
+
+.output-display table {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+
+.output-display thead {
+  background-color: var(--secondary-color);
+  color: var(--h1-color);
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+.output-display tr {
+  border-top: 1px solid var(--secondary-color);
+}
+
+.output-display td {
+  padding-block: 5px;
+}
+
+.num-col {
+  text-align: right;
+  padding-right: 2px;
+}
+
+.icon-col {
+  text-align: left;
+  padding-left: 2px;
+}
+
+.icon-img {
+  height: 2em;
+  vertical-align: middle;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.temp-steel {
+  background-color: #5e7682;
+}
+
+.steel-bar {
+  background-color: #9bb8c7;
+}
+
+.nitrogen {
+  background-color: #f8c471;
+}
+
+.iron-ore {
+  background-color: #f4684e;
+}
+
+/* ----- Sidebar ----- */
+
+aside p {
+  margin: 10px 5px;
+}
+
+aside h3 {
+  text-align: center;
+}

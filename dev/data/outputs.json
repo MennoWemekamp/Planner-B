@@ -1,0 +1,1008 @@
+{
+  "outputs": [
+    {
+      "name": "?recheck everything in game, I think there are mistakes in both my data and the original raw data I copied",
+      "icon": "",
+      "bg-color": "#",
+      "building": "",
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Iron Ore",
+      "icon": "Ore.png",
+      "bg-color": "#F4684E",
+      "building": "Extractor",
+      "cycles": 15,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Iron Node",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Sulfur",
+      "icon": "Ore.png",
+      "bg-color": "#E1C456",
+      "building": "Extractor",
+      "cycles": 15,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Sulfur Node",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Aluminum Ore",
+      "icon": "Ore.png",
+      "bg-color": "#BEBEBE",
+      "building": "Extractor",
+      "cycles": 15,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Aluminum Node",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Fluorite",
+      "icon": "Ore.png",
+      "bg-color": "#B7DD9B",
+      "building": "Extractor",
+      "cycles": 15,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Fluorite Node",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Water",
+      "icon": "Fluid.png",
+      "bg-color": "#5C8EE9",
+      "building": "Ice Extractor",
+      "cycles": 5,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Ice",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Nitrogen",
+      "icon": "Fluid.png",
+      "bg-color": "#F8C471",
+      "building": "Ice",
+      "cycles": 5,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Ice",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Water",
+      "icon": "Fluid.png",
+      "bg-color": "#5C8EE9",
+      "building": "Water Pump",
+      "cycles": 5,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Liquid Water",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Oxygen",
+      "icon": "Fluid.png",
+      "bg-color": "#8BD2FB",
+      "building": "Atmospheric Extractor",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Carbon",
+      "icon": "Carbon.png",
+      "bg-color": "#2A2A2A",
+      "building": "Atmospheric Extractor",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Metal Waste",
+      "icon": "Waste.png",
+      "bg-color": "#FF9A63",
+      "building": "Waste Disposal",
+      "cycles": null,
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Organic Waste",
+      "icon": "Waste.png",
+      "bg-color": "#8E7B33",
+      "building": "Waste Disposal",
+      "cycles": null,
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Plastic Waste",
+      "icon": "Waste.png",
+      "bg-color": "#8A5E7B",
+      "building": "Waste Disposal",
+      "cycles": null,
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Facory Produced outputs",
+      "icon": "",
+      "bg-color": "#",
+      "building": "",
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Steel Bar",
+      "icon": "Bar.png",
+      "bg-color": "#9BB8C7",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Iron Ore",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Concrete",
+      "icon": "Concrete.png",
+      "bg-color": "#949478",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Sulfur",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Aluminum Bar",
+      "icon": "Bar.png",
+      "bg-color": "#F3F3F3",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Aluminum Ore",
+          "amount": 2
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Mechanical Parts",
+      "icon": "Mechanical_Parts.png",
+      "bg-color": "#97D7BE",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Steel Bar",
+          "amount": 1
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Reinforced Concrete",
+      "icon": "Concrete.png",
+      "bg-color": "#626253",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Concrete",
+          "amount": 1
+        },
+        {
+          "name": "Steel Bar",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Polymer Bar",
+      "icon": "Bar.png",
+      "bg-color": "#DD90C3",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Carbon",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "High-tech Parts",
+      "icon": "High-tech_Parts.png",
+      "bg-color": "#D61B54",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 3,
+      "input": [
+        {
+          "name": "Aluminum Bar",
+          "amount": 2
+        },
+        {
+          "name": "Polymer Bar",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Compost",
+      "icon": "Food.png",
+      "bg-color": "#873600",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Carbon",
+          "amount": 2
+        },
+        {
+          "name": "Nitrogen",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Tempered Steel",
+      "icon": "Bar.png",
+      "bg-color": "#5E7682",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 3,
+      "input": [
+        {
+          "name": "Steel Bar",
+          "amount": 4
+        },
+        {
+          "name": "Nitrogen",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Composite",
+      "icon": "High-tech_Parts.png",
+      "bg-color": "#C067E6",
+      "building": "Factory",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Tempered Steel",
+          "amount": 1
+        },
+        {
+          "name": "Polymer Bar",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Recycling Produced outputs",
+      "icon": "",
+      "bg-color": "#",
+      "building": "",
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Steel Bar",
+      "icon": "Bar.png",
+      "bg-color": "#9BB8C7",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 2,
+      "input": [
+        {
+          "name": "Metal Waste",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Aluminum Bar",
+      "icon": "Bar.png",
+      "bg-color": "#F3F3F3",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Metal Waste",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Polymer Bar",
+      "icon": "Bar.png",
+      "bg-color": "#DD90C3",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Plastic Waste",
+          "amount": 2
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Compost",
+      "icon": "Food.png",
+      "bg-color": "#873600",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Organic Waste",
+          "amount": 5
+        },
+        {
+          "name": "Nitrogen",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Food",
+      "icon": "Food.png",
+      "bg-color": "#00C152",
+      "building": "Greenhouse",
+      "cycles": 30,
+      "amount": 2,
+      "input": [
+        {
+          "name": "Water",
+          "amount": 4
+        },
+        {
+          "name": "Compost",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Terraforming Poducts, ?check the numbers on trees",
+      "icon": "",
+      "bg-color": "#",
+      "building": "",
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "NF3",
+      "icon": "Ore.png",
+      "bg-color": "#F5B7B1",
+      "building": "Greenhouse Gas Generator",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Nitrogen",
+          "amount": 1
+        },
+        {
+          "name": "Fluorite",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "SF6",
+      "icon": "Ore.png",
+      "bg-color": "#ABEBC6",
+      "building": "Greenhouse Gas Generator",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Sulfur",
+          "amount": 1
+        },
+        {
+          "name": "Fluorite",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Assembly Plant recipies",
+      "icon": "",
+      "bg-color": "",
+      "building": "",
+      "cycles": 12,
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Pine Tree",
+      "icon": "Pine_Tree.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Carbon",
+          "amount": 3
+        },
+        {
+          "name": "Water",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "name": "Eucalyptus Tree",
+      "icon": "Eucalyptus_Tree.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 3,
+      "input": [
+        {
+          "name": "Carbon",
+          "amount": 3
+        },
+        {
+          "name": "Water",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "name": "Extractor",
+      "icon": "Extractor.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Steel Bar",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Depot",
+      "icon": "Depot.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Steel Bar",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Facory",
+      "icon": "Factory.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Mechanical Parts",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Assembly Plant",
+      "icon": "Assembly_Plant.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Mechanical Parts",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Supply Center",
+      "icon": "Supply_Center.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Concrete",
+          "amount": 4
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Road",
+      "icon": "Road.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 4,
+      "input": [
+        {
+          "name": "Concrete",
+          "amount": 4
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Truck",
+      "icon": "Truck.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Mechanical Parts",
+          "amount": 2
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Atmospheric Extractor",
+      "icon": "Atmospheric_Extractor.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Mechanical Parts",
+          "amount": 3
+        },
+        {
+          "name": "Aluminum Bar",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Landmark Tower",
+      "icon": "Landmark_Tower.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Concrete",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Depot MK2",
+      "icon": "Depot_MK2.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Aluminum Bar",
+          "amount": 1
+        },
+        {
+          "name": "Polymer Bar",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Greenhouse Gas Generator",
+      "icon": "Greenhouse_Gas_Generator.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Mechanical Parts",
+          "amount": 3
+        },
+        {
+          "name": "High-tech Parts",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Rail",
+      "icon": "Rail.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 8,
+      "input": [
+        {
+          "name": "Concrete",
+          "amount": 1
+        },
+        {
+          "name": "Steel Bar",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Train",
+      "icon": "Train.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Mechanical Parts",
+          "amount": 4
+        },
+        {
+          "name": "High-tech Parts",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "name": "Waste Disposal",
+      "icon": "Waste_Disposal.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Concrete",
+          "amount": 1
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Recycling Center",
+      "icon": "Recycling_Center.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Concrete",
+          "amount": 1
+        },
+        {
+          "name": "High-tech Parts",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Ice Extractor",
+      "icon": "Ice_Extractor.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Reinforced Concrete",
+          "amount": 2
+        },
+        {
+          "name": "Mechanical Parts",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "name": "Greenhouse",
+      "icon": "Greenhouse.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Steel Bar",
+          "amount": 2
+        },
+        {
+          "name": "Polymer Bar",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "name": "Dam Element",
+      "icon": "Dam_Element.webp",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Reinforced Concrete",
+          "amount": 2
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Pumping Station",
+      "icon": "Pumping_Station.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Reinforced Concrete",
+          "amount": 2
+        },
+        {
+          "name": "High-tech Parts",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "name": "Depot MK3",
+      "icon": "Depot_MK3.png",
+      "bg-color": "#FFFFFF",
+      "building": "Assembly Plant",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Composite",
+          "amount": 2
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    }
+  ]
+}
