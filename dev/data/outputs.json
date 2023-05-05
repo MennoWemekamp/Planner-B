@@ -1,21 +1,10 @@
 {
   "outputs": [
     {
-      "name": "?recheck everything in game, I think there are mistakes in both my data and the original raw data I copied",
-      "icon": "",
-      "bg-color": "#",
-      "building": "",
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
+      "name": "----- Product -----"
+    },
+    {
+      "name": "----- Minerals -----"
     },
     {
       "name": "Iron Ore",
@@ -90,165 +79,7 @@
       ]
     },
     {
-      "name": "Water",
-      "icon": "Fluid.png",
-      "bg-color": "#5C8EE9",
-      "building": "Ice Extractor",
-      "cycles": 5,
-      "amount": 1,
-      "input": [
-        {
-          "name": "Ice",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Nitrogen",
-      "icon": "Fluid.png",
-      "bg-color": "#F8C471",
-      "building": "Ice",
-      "cycles": 5,
-      "amount": 1,
-      "input": [
-        {
-          "name": "Ice",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Water",
-      "icon": "Fluid.png",
-      "bg-color": "#5C8EE9",
-      "building": "Water Pump",
-      "cycles": 5,
-      "amount": 1,
-      "input": [
-        {
-          "name": "Liquid Water",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Oxygen",
-      "icon": "Fluid.png",
-      "bg-color": "#8BD2FB",
-      "building": "Atmospheric Extractor",
-      "cycles": 12,
-      "amount": 1,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Carbon",
-      "icon": "Carbon.png",
-      "bg-color": "#2A2A2A",
-      "building": "Atmospheric Extractor",
-      "cycles": 12,
-      "amount": 1,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Metal Waste",
-      "icon": "Waste.png",
-      "bg-color": "#FF9A63",
-      "building": "Waste Disposal",
-      "cycles": null,
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Organic Waste",
-      "icon": "Waste.png",
-      "bg-color": "#8E7B33",
-      "building": "Waste Disposal",
-      "cycles": null,
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Plastic Waste",
-      "icon": "Waste.png",
-      "bg-color": "#8A5E7B",
-      "building": "Waste Disposal",
-      "cycles": null,
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Facory Produced outputs",
-      "icon": "",
-      "bg-color": "#",
-      "building": "",
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
+      "name": "----- Raw Materials -----"
     },
     {
       "name": "Steel Bar",
@@ -303,6 +134,99 @@
           "amount": null
         }
       ]
+    },
+    {
+      "name": "Carbon",
+      "icon": "Carbon.png",
+      "bg-color": "#2A2A2A",
+      "building": "Atmospheric Extractor",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Oxygen",
+      "icon": "Fluid.png",
+      "bg-color": "#8BD2FB",
+      "building": "Atmospheric Extractor",
+      "cycles": 12,
+      "amount": 1,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Nitrogen",
+      "icon": "Fluid.png",
+      "bg-color": "#F8C471",
+      "building": "Ice",
+      "cycles": 5,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Ice",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Water",
+      "icon": "Fluid.png",
+      "bg-color": "#5C8EE9",
+      "building": "Ice Extractor",
+      "cycles": 5,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Ice",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Water",
+      "icon": "Fluid.png",
+      "bg-color": "#5C8EE9",
+      "building": "Water Pump",
+      "cycles": 5,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Liquid Water",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "----- Manufactured Goods -----"
     },
     {
       "name": "Mechanical Parts",
@@ -431,95 +355,6 @@
       ]
     },
     {
-      "name": "Recycling Produced outputs",
-      "icon": "",
-      "bg-color": "#",
-      "building": "",
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Steel Bar",
-      "icon": "Bar.png",
-      "bg-color": "#9BB8C7",
-      "building": "Recycling Center",
-      "cycles": 30,
-      "amount": 2,
-      "input": [
-        {
-          "name": "Metal Waste",
-          "amount": 3
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Aluminum Bar",
-      "icon": "Bar.png",
-      "bg-color": "#F3F3F3",
-      "building": "Recycling Center",
-      "cycles": 30,
-      "amount": 1,
-      "input": [
-        {
-          "name": "Metal Waste",
-          "amount": 3
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Polymer Bar",
-      "icon": "Bar.png",
-      "bg-color": "#DD90C3",
-      "building": "Recycling Center",
-      "cycles": 30,
-      "amount": 1,
-      "input": [
-        {
-          "name": "Plastic Waste",
-          "amount": 2
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
-    },
-    {
-      "name": "Compost",
-      "icon": "Food.png",
-      "bg-color": "#873600",
-      "building": "Recycling Center",
-      "cycles": 30,
-      "amount": 1,
-      "input": [
-        {
-          "name": "Organic Waste",
-          "amount": 5
-        },
-        {
-          "name": "Nitrogen",
-          "amount": 1
-        }
-      ]
-    },
-    {
       "name": "Food",
       "icon": "Food.png",
       "bg-color": "#00C152",
@@ -538,21 +373,7 @@
       ]
     },
     {
-      "name": "Terraforming Poducts, ?check the numbers on trees",
-      "icon": "",
-      "bg-color": "#",
-      "building": "",
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
+      "name": "----- Greenhouse Gas -----"
     },
     {
       "name": "NF3",
@@ -591,22 +412,7 @@
       ]
     },
     {
-      "name": "Assembly Plant recipies",
-      "icon": "",
-      "bg-color": "",
-      "building": "",
-      "cycles": 12,
-      "amount": null,
-      "input": [
-        {
-          "name": "",
-          "amount": null
-        },
-        {
-          "name": "",
-          "amount": null
-        }
-      ]
+      "name": "----- Constructuble Items -----"
     },
     {
       "name": "Pine Tree",
@@ -1001,6 +807,138 @@
         {
           "name": "",
           "amount": null
+        }
+      ]
+    },
+    {
+      "name": "----- City Waste -----"
+    },
+    {
+      "name": "Metal Waste",
+      "icon": "Waste.png",
+      "bg-color": "#FF9A63",
+      "building": "Waste Disposal",
+      "cycles": null,
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Organic Waste",
+      "icon": "Waste.png",
+      "bg-color": "#8E7B33",
+      "building": "Waste Disposal",
+      "cycles": null,
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Plastic Waste",
+      "icon": "Waste.png",
+      "bg-color": "#8A5E7B",
+      "building": "Waste Disposal",
+      "cycles": null,
+      "amount": null,
+      "input": [
+        {
+          "name": "",
+          "amount": null
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "----- Recycling Products -----"
+    },
+    {
+      "name": "Steel Bar",
+      "icon": "Bar.png",
+      "bg-color": "#9BB8C7",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 2,
+      "input": [
+        {
+          "name": "Metal Waste",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Aluminum Bar",
+      "icon": "Bar.png",
+      "bg-color": "#F3F3F3",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Metal Waste",
+          "amount": 3
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Polymer Bar",
+      "icon": "Bar.png",
+      "bg-color": "#DD90C3",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Plastic Waste",
+          "amount": 2
+        },
+        {
+          "name": "",
+          "amount": null
+        }
+      ]
+    },
+    {
+      "name": "Compost",
+      "icon": "Food.png",
+      "bg-color": "#873600",
+      "building": "Recycling Center",
+      "cycles": 30,
+      "amount": 1,
+      "input": [
+        {
+          "name": "Organic Waste",
+          "amount": 5
+        },
+        {
+          "name": "Nitrogen",
+          "amount": 1
         }
       ]
     }

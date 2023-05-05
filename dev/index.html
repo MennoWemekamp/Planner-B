@@ -29,20 +29,13 @@
             <div class="flex flex-gap">
               <div class="col-a">1</div>
               <select class="input" id="inp-product" name="inp-product">
-                <option value="">Choose a product</option>
-                <option value="Steel">Steel</option>
-                <option value="Factory">Factory</option>
-                <option value="Mechanical Components">
-                  Mechanical Components
-                </option>
-                <option value="Carbon">Carbon</option>
-                <option value="Road">Road</option>
+                <!-- input build area -->
               </select>
               <input
-                placeholder="number"
+                value="0"
                 class="input inp-number"
                 type="number"
-                id="imp-number"
+                id="inp-number"
               />
             </div>
             <button class="button inp-remove">-</button>
@@ -50,7 +43,7 @@
           <div class="flex flex-gap input-buttons">
             <button class="button inp-button">add product</button>
             <button class="button inp-button">reset</button>
-            <button class="button inp-button">calculate</button>
+            <button class="button inp-button" id="calculate">calculate</button>
           </div>
         </div>
         <div class="output-display col-c">
@@ -242,5 +235,6 @@
         </p>
       </aside>
     </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
