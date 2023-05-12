@@ -24,7 +24,7 @@ It is an app that a user can select one final product, and how many of said prod
 
 1. Data Storage:
 
-   - TBD // probably JSON or JScript Obj
+   - JSON file
 
 1. Webserver:
 
@@ -42,17 +42,25 @@ It is an app that a user can select one final product, and how many of said prod
 
    [Visual Studio Code](https://code.visualstudio.com/)
 
-## Steps to be done
+## Steps to be done for v0.2
 
-1.  Aggregate (collect) all the data that is needed to make the calculations.
-2.  Build an interface that allows users to interact.
-    Interface:
-    2a. Either be a an input box of a number and a dropdown list with a product. Or a list of all possible products with an input box for number and a checkbox to indicate that this product will be included in the calculation.
-    2b. Resulting production chain will be a list of buildings and the amount that building needed, and the recipe/resource for each of those buildings.
-3.  Make the calculations.
+1.  Handle two inputs for a product in the calculator function
+2.  Disable recycling product temporarily
+3.  Display the output as a table.
+    1.  Check app.js line 179 for reminder
+    2.  Have the output reset on a new calculation
 
 ## Summary of the project
 
 - To create a usable calculator to calculation production chain in the game "Plan B".
 - To learn the basics of coming up with and executing a project.
 - Practicing with the languages and tech used to build the project.
+
+## potential features
+
+Make sure the calculator functions handles mineral inputs
+Calculating the entire production chain instead of just one step
+Calculating multiple product requests
+Merging multiple requests into a single output display
+Query history
+admin platform for data updating

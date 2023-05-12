@@ -31,8 +31,9 @@
               <select class="input" id="inp-product" name="inp-product">
                 <!-- input build area -->
               </select>
+              <!-- value set to 30 for testing JS, set back to 0 -->
               <input
-                value="0"
+                value="30"
                 class="input inp-number"
                 type="number"
                 id="inp-number"
@@ -46,7 +47,7 @@
             <button class="button inp-button" id="calculate">calculate</button>
           </div>
         </div>
-        <div class="output-display col-c">
+        <div class="output-display col-c" id="output-display">
           <!-- probably will be js generated -->
           <div>
             <h3>Product 1: Tempered Steel</h3>
@@ -173,49 +174,7 @@
               </tbody>
             </table>
           </div>
-          <div>
-            <h3>Product 2: Tempereder Steel</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>building</th>
-                  <th>recipe</th>
-                  <th>output</th>
-                  <th>inputs</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowspan="2">Factory x4</td>
-                  <td rowspan="2">Tempered Steel</td>
-                  <td rowspan="2">310</td>
-                  <td>103.2 Nitrogen</td>
-                </tr>
-                <tr>
-                  <td>412.8 Steel bar</td>
-                </tr>
-                <tr>
-                  <td>Factory x14</td>
-                  <td>Steel Bar</td>
-                  <td>412.8</td>
-                  <td>1238.4 Iron ore</td>
-                </tr>
-                <tr>
-                  <td>Ice Extractor x21</td>
-                  <td>Placed on Ice</td>
-                  <td>103.2</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Excavator</td>
-                  <td>Placed on Iron</td>
-                  <td>1238.4</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+          
       </main>
       <aside class="col-c">
         <h3>About</h3>
@@ -232,6 +191,9 @@
         <p>
           It was written by
           <a href="https://github.com/MennoWemekamp">Menno Wemekamp</a>.
+        </p>
+        <p>
+          Version: <a href="https://github.com/MennoWemekamp/Planner-B">0.1</a>
         </p>
       </aside>
     </div>

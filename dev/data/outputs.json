@@ -9,14 +9,14 @@
     {
       "name": "Iron Ore",
       "icon": "Ore.png",
-      "bg-color": "#F4684E",
+      "bgcolor": "#F4684E",
       "building": "Extractor",
       "cycles": 15,
       "amount": 1,
       "input": [
         {
-          "name": "Iron Node",
-          "amount": null
+          "name": "Iron Deposit",
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -27,14 +27,14 @@
     {
       "name": "Sulfur",
       "icon": "Ore.png",
-      "bg-color": "#E1C456",
+      "bgcolor": "#E1C456",
       "building": "Extractor",
       "cycles": 15,
       "amount": 1,
       "input": [
         {
-          "name": "Sulfur Node",
-          "amount": null
+          "name": "Sulfur Deposit",
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -45,14 +45,14 @@
     {
       "name": "Aluminum Ore",
       "icon": "Ore.png",
-      "bg-color": "#BEBEBE",
+      "bgcolor": "#BEBEBE",
       "building": "Extractor",
       "cycles": 15,
       "amount": 1,
       "input": [
         {
-          "name": "Aluminum Node",
-          "amount": null
+          "name": "Aluminum Deposit",
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -63,14 +63,14 @@
     {
       "name": "Fluorite",
       "icon": "Ore.png",
-      "bg-color": "#B7DD9B",
+      "bgcolor": "#B7DD9B",
       "building": "Extractor",
       "cycles": 15,
       "amount": 1,
       "input": [
         {
-          "name": "Fluorite Node",
-          "amount": null
+          "name": "Fluorite Deposit",
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -84,7 +84,7 @@
     {
       "name": "Steel Bar",
       "icon": "Bar.png",
-      "bg-color": "#9BB8C7",
+      "bgcolor": "#9BB8C7",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -102,7 +102,7 @@
     {
       "name": "Concrete",
       "icon": "Concrete.png",
-      "bg-color": "#949478",
+      "bgcolor": "#949478",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -120,7 +120,7 @@
     {
       "name": "Aluminum Bar",
       "icon": "Bar.png",
-      "bg-color": "#F3F3F3",
+      "bgcolor": "#F3F3F3",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -138,14 +138,14 @@
     {
       "name": "Carbon",
       "icon": "Carbon.png",
-      "bg-color": "#2A2A2A",
+      "bgcolor": "#2A2A2A",
       "building": "Atmospheric Extractor",
       "cycles": 12,
       "amount": 1,
       "input": [
         {
           "name": "",
-          "amount": null
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -156,14 +156,14 @@
     {
       "name": "Oxygen",
       "icon": "Fluid.png",
-      "bg-color": "#8BD2FB",
+      "bgcolor": "#8BD2FB",
       "building": "Atmospheric Extractor",
       "cycles": 12,
       "amount": 1,
       "input": [
         {
           "name": "",
-          "amount": null
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -174,14 +174,14 @@
     {
       "name": "Nitrogen",
       "icon": "Fluid.png",
-      "bg-color": "#F8C471",
+      "bgcolor": "#F8C471",
       "building": "Ice",
       "cycles": 5,
       "amount": 1,
       "input": [
         {
           "name": "Ice",
-          "amount": null
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -192,14 +192,14 @@
     {
       "name": "Water",
       "icon": "Fluid.png",
-      "bg-color": "#5C8EE9",
+      "bgcolor": "#5C8EE9",
       "building": "Ice Extractor",
       "cycles": 5,
       "amount": 1,
       "input": [
         {
           "name": "Ice",
-          "amount": null
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -208,16 +208,16 @@
       ]
     },
     {
-      "name": "Water",
+      "name": "Pumped Water",
       "icon": "Fluid.png",
-      "bg-color": "#5C8EE9",
+      "bgcolor": "#5C8EE9",
       "building": "Water Pump",
       "cycles": 5,
       "amount": 1,
       "input": [
         {
           "name": "Liquid Water",
-          "amount": null
+          "amount": "Placed"
         },
         {
           "name": "",
@@ -231,7 +231,7 @@
     {
       "name": "Mechanical Parts",
       "icon": "Mechanical_Parts.png",
-      "bg-color": "#97D7BE",
+      "bgcolor": "#97D7BE",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -249,7 +249,7 @@
     {
       "name": "Reinforced Concrete",
       "icon": "Concrete.png",
-      "bg-color": "#626253",
+      "bgcolor": "#626253",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -267,7 +267,7 @@
     {
       "name": "Polymer Bar",
       "icon": "Bar.png",
-      "bg-color": "#DD90C3",
+      "bgcolor": "#DD90C3",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -285,7 +285,7 @@
     {
       "name": "High-tech Parts",
       "icon": "High-tech_Parts.png",
-      "bg-color": "#D61B54",
+      "bgcolor": "#D61B54",
       "building": "Factory",
       "cycles": 30,
       "amount": 3,
@@ -303,7 +303,7 @@
     {
       "name": "Compost",
       "icon": "Food.png",
-      "bg-color": "#873600",
+      "bgcolor": "#873600",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -321,7 +321,7 @@
     {
       "name": "Tempered Steel",
       "icon": "Bar.png",
-      "bg-color": "#5E7682",
+      "bgcolor": "#5E7682",
       "building": "Factory",
       "cycles": 30,
       "amount": 3,
@@ -339,7 +339,7 @@
     {
       "name": "Composite",
       "icon": "High-tech_Parts.png",
-      "bg-color": "#C067E6",
+      "bgcolor": "#C067E6",
       "building": "Factory",
       "cycles": 30,
       "amount": 1,
@@ -357,7 +357,7 @@
     {
       "name": "Food",
       "icon": "Food.png",
-      "bg-color": "#00C152",
+      "bgcolor": "#00C152",
       "building": "Greenhouse",
       "cycles": 30,
       "amount": 2,
@@ -378,7 +378,7 @@
     {
       "name": "NF3",
       "icon": "Ore.png",
-      "bg-color": "#F5B7B1",
+      "bgcolor": "#F5B7B1",
       "building": "Greenhouse Gas Generator",
       "cycles": 30,
       "amount": 1,
@@ -396,7 +396,7 @@
     {
       "name": "SF6",
       "icon": "Ore.png",
-      "bg-color": "#ABEBC6",
+      "bgcolor": "#ABEBC6",
       "building": "Greenhouse Gas Generator",
       "cycles": 30,
       "amount": 1,
@@ -417,7 +417,7 @@
     {
       "name": "Pine Tree",
       "icon": "Pine_Tree.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -435,7 +435,7 @@
     {
       "name": "Eucalyptus Tree",
       "icon": "Eucalyptus_Tree.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 3,
@@ -453,7 +453,7 @@
     {
       "name": "Extractor",
       "icon": "Extractor.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -471,7 +471,7 @@
     {
       "name": "Depot",
       "icon": "Depot.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -489,7 +489,7 @@
     {
       "name": "Facory",
       "icon": "Factory.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -507,7 +507,7 @@
     {
       "name": "Assembly Plant",
       "icon": "Assembly_Plant.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -525,7 +525,7 @@
     {
       "name": "Supply Center",
       "icon": "Supply_Center.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -543,7 +543,7 @@
     {
       "name": "Road",
       "icon": "Road.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 4,
@@ -561,7 +561,7 @@
     {
       "name": "Truck",
       "icon": "Truck.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -579,7 +579,7 @@
     {
       "name": "Atmospheric Extractor",
       "icon": "Atmospheric_Extractor.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -597,7 +597,7 @@
     {
       "name": "Landmark Tower",
       "icon": "Landmark_Tower.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -615,7 +615,7 @@
     {
       "name": "Depot MK2",
       "icon": "Depot_MK2.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -633,7 +633,7 @@
     {
       "name": "Greenhouse Gas Generator",
       "icon": "Greenhouse_Gas_Generator.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -651,7 +651,7 @@
     {
       "name": "Rail",
       "icon": "Rail.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 8,
@@ -669,7 +669,7 @@
     {
       "name": "Train",
       "icon": "Train.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -687,7 +687,7 @@
     {
       "name": "Waste Disposal",
       "icon": "Waste_Disposal.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -705,7 +705,7 @@
     {
       "name": "Recycling Center",
       "icon": "Recycling_Center.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -723,7 +723,7 @@
     {
       "name": "Ice Extractor",
       "icon": "Ice_Extractor.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -741,7 +741,7 @@
     {
       "name": "Greenhouse",
       "icon": "Greenhouse.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -759,7 +759,7 @@
     {
       "name": "Dam Element",
       "icon": "Dam_Element.webp",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -777,7 +777,7 @@
     {
       "name": "Pumping Station",
       "icon": "Pumping_Station.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -795,7 +795,7 @@
     {
       "name": "Depot MK3",
       "icon": "Depot_MK3.png",
-      "bg-color": "#FFFFFF",
+      "bgcolor": "#FFFFFF",
       "building": "Assembly Plant",
       "cycles": 12,
       "amount": 1,
@@ -816,7 +816,7 @@
     {
       "name": "Metal Waste",
       "icon": "Waste.png",
-      "bg-color": "#FF9A63",
+      "bgcolor": "#FF9A63",
       "building": "Waste Disposal",
       "cycles": null,
       "amount": null,
@@ -834,7 +834,7 @@
     {
       "name": "Organic Waste",
       "icon": "Waste.png",
-      "bg-color": "#8E7B33",
+      "bgcolor": "#8E7B33",
       "building": "Waste Disposal",
       "cycles": null,
       "amount": null,
@@ -852,7 +852,7 @@
     {
       "name": "Plastic Waste",
       "icon": "Waste.png",
-      "bg-color": "#8A5E7B",
+      "bgcolor": "#8A5E7B",
       "building": "Waste Disposal",
       "cycles": null,
       "amount": null,
@@ -871,9 +871,9 @@
       "name": "----- Recycling Products -----"
     },
     {
-      "name": "Steel Bar",
+      "name": "Recycled Steel Bar",
       "icon": "Bar.png",
-      "bg-color": "#9BB8C7",
+      "bgcolor": "#9BB8C7",
       "building": "Recycling Center",
       "cycles": 30,
       "amount": 2,
@@ -889,9 +889,9 @@
       ]
     },
     {
-      "name": "Aluminum Bar",
+      "name": "Recycled Aluminum Bar",
       "icon": "Bar.png",
-      "bg-color": "#F3F3F3",
+      "bgcolor": "#F3F3F3",
       "building": "Recycling Center",
       "cycles": 30,
       "amount": 1,
@@ -907,9 +907,9 @@
       ]
     },
     {
-      "name": "Polymer Bar",
+      "name": "Recycled Polymer Bar",
       "icon": "Bar.png",
-      "bg-color": "#DD90C3",
+      "bgcolor": "#DD90C3",
       "building": "Recycling Center",
       "cycles": 30,
       "amount": 1,
@@ -925,9 +925,9 @@
       ]
     },
     {
-      "name": "Compost",
+      "name": "Recycled Compost",
       "icon": "Food.png",
-      "bg-color": "#873600",
+      "bgcolor": "#873600",
       "building": "Recycling Center",
       "cycles": 30,
       "amount": 1,
