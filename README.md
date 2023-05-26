@@ -42,13 +42,15 @@ It is an app that a user can select one final product, and how many of said prod
 
    [Visual Studio Code](https://code.visualstudio.com/)
 
-## Steps to be done for v0.2
+## Steps to be done for v0.3
 
-1.  Handle two inputs for a product in the calculator function
-2.  Disable recycling product temporarily
-3.  Display the output as a table.
-    1.  Check app.js line 179 for reminder
-    2.  Have the output reset on a new calculation
+1. Calculate the required inputs more then one step deep in the production chain. For example, when calculating composites it will stop before it will list the number of factories required to make the required steel bars.
+
+## Steps for future versions
+
+1. refactor js code
+2. finish ui
+3. finish asside tabs
 
 ## Summary of the project
 
@@ -58,6 +60,7 @@ It is an app that a user can select one final product, and how many of said prod
 
 ## potential features
 
+Group the options in the select dropdown using `optgroup` instead of JSON objects
 Make sure the calculator functions handles mineral inputs
 Calculating the entire production chain instead of just one step
 Calculating multiple product requests

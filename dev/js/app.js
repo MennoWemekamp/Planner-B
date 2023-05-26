@@ -79,7 +79,7 @@ async function calculator(prod, numb) {
           inp1Cycles = obj.amount * inp1Amount;
         }
       }
-      // add
+      // add cycles to object
       inp1.cycles = inp1Cycles;
       // add inp1 to display output array
       outputDisplay.push(inp1);
@@ -87,7 +87,7 @@ async function calculator(prod, numb) {
     // step 6 check if there is a second input and create obj for it
     if (p1.input[1].amount) {
       inp2 = {};
-      // add name to input 1
+      // add name to input 2
       inp2.name = p1.input[1].name;
       // calculate the amount of input product needed
       let inp2Amount = prod1.cycles * p1.input[1].amount;
@@ -98,15 +98,15 @@ async function calculator(prod, numb) {
           inp2Cycles = obj.amount * inp2Amount;
         }
       }
-      // add
+      // add cycles to object
       inp2.cycles = inp2Cycles;
-      // add inp1 to display output array
+      // add inp2 to display output array
       outputDisplay.push(inp2);
     }
     // Final step: clear output display and call output display function
     outputDiv.innerHTML = "";
-    console.log(outputDisplay);
 
+    console.log(outputDisplay);
     createOutput(outputDisplay);
   }
 }
@@ -115,7 +115,7 @@ async function calculator(prod, numb) {
 // declare variable for output div
 const outputDiv = document.getElementById("output-display");
 // set default output display content
-// outputDiv.innerHTML = "<h3>Select a product above to get started.</h3>";
+outputDiv.innerHTML = "<h3>Select a product above to get started.</h3>";
 // Write function that creates output html
 // things to display for each on the objects in outputDisplay: number of buildings, total amount they output, total amount of input needed.
 async function createOutput(arr) {
@@ -168,6 +168,15 @@ async function createOutput(arr) {
     // get buildings required
     const buildingNum = Math.ceil(obj.cycles / prod.cycles);
     const buildingType = prod.building;
+    // get data about the building
+    let building;
+    for (y of data) {
+      if (y.name === prod.building) {
+        building = y;
+      }
+    }
+    const buildingIcon = building.icon;
+    const buildingColor = building.bgcolor;
     // get output amount
     const outputAmount = obj.cycles * prod.amount;
     const outputIcon = prod.icon;
@@ -178,18 +187,58 @@ async function createOutput(arr) {
       if (inp.amount) {
         // compare the input names to the JSON and pull icon and bgcolor from that object in the JSON and then use that to build the table row later.
         let input = {};
-        input.icon = prod.icon;
-        input.color = prod.bgcolor;
+        input.name = inp.name;
         input.amount = obj.cycles * inp.amount;
+        // grap data for the inputs from json
+        let inputData;
+        for (w of data) {
+          if (w.name === inp.name) {
+            inputData = w;
+            input.icon = inputData.icon;
+            input.color = inputData.bgcolor;
+          }
+        }
+        // add input object to array of inputs
         inputs.push(input);
       }
-    console.log(inputs);
-
     // build each td using the const above
-
+    let dataCells = "";
+    function numCol(num) {
+      if (inputs[0] && inputs[1]) {
+        dataCells += `<td class="num-col" rowspan="2">${num}</td>`;
+      } else {
+        dataCells += `<td class="num-col">${num}</td>`;
+      }
+    }
+    function iconCol(icon, bgcolor, name) {
+      if (inputs[0] && inputs[1]) {
+        dataCells += `<td class="icon-col" rowspan="2">
+      <span class="icon-span"><img class="icon-img" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+      } else {
+        dataCells += `<td class="icon-col"><span class="icon-span"><img class="icon-img" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+      }
+    }
+    // create building column
+    numCol(buildingNum);
+    iconCol(buildingIcon, buildingColor, buildingType);
+    // create output column
+    numCol(outputAmount);
+    iconCol(outputIcon, outputColor, obj.name);
+    // create input column, rowspan for dual inputs
+    if (inputs[0] && inputs[1]) {
+      dataCells += `<td class="num-col">${inputs[0].amount}</td><td class="icon-col"><span class="icon-span"><img class="icon-img" src="img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr><td class="num-col">${inputs[1].amount}</td><td class="icon-col"><span class="icon-span"><img class="icon-img" src="img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
+    } else if (inputs[0].amount) {
+      numCol(inputs[0].amount);
+      iconCol(inputs[0].icon, inputs[0].color, inputs[0].name);
+    } else {
+      dataCells += `<td colspan="2">Place on ${inputs[0].name}</td>`;
+    }
     // add td's to tr and tr to rows array
-    rows += `<tr></tr>`;
+    let rowStart = "<tr>";
+    let rowEnd = "</tr>";
+    rows += `${rowStart}${dataCells}${rowEnd}`;
   }
+
   // Set inner html
   tBody.innerHTML = rows;
 }
