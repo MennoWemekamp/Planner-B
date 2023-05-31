@@ -15,7 +15,7 @@
       "amount": 1,
       "input": [
         {
-          "name": "Iron Deposit",
+          "name": "on Iron Deposit",
           "amount": "Placed"
         },
         {
@@ -33,7 +33,7 @@
       "amount": 1,
       "input": [
         {
-          "name": "Sulfur Deposit",
+          "name": "on Sulfur Deposit",
           "amount": "Placed"
         },
         {
@@ -51,7 +51,7 @@
       "amount": 1,
       "input": [
         {
-          "name": "Aluminum Deposit",
+          "name": "on Aluminum Deposit",
           "amount": "Placed"
         },
         {
@@ -69,7 +69,7 @@
       "amount": 1,
       "input": [
         {
-          "name": "Fluorite Deposit",
+          "name": "on Fluorite Deposit",
           "amount": "Placed"
         },
         {
@@ -175,12 +175,12 @@
       "name": "Nitrogen",
       "icon": "Fluid.png",
       "bgcolor": "#F8C471",
-      "building": "Ice",
+      "building": "Ice Extractor",
       "cycles": 5,
       "amount": 1,
       "input": [
         {
-          "name": "Ice",
+          "name": "on Ice",
           "amount": "Placed"
         },
         {
@@ -198,7 +198,7 @@
       "amount": 1,
       "input": [
         {
-          "name": "Ice",
+          "name": "on Ice",
           "amount": "Placed"
         },
         {
@@ -211,12 +211,12 @@
       "name": "Pumped Water",
       "icon": "Fluid.png",
       "bgcolor": "#5C8EE9",
-      "building": "Water Pump",
+      "building": "Pumping Station",
       "cycles": 5,
       "amount": 1,
       "input": [
         {
-          "name": "Liquid Water",
+          "name": "on Liquid Water",
           "amount": "Placed"
         },
         {
