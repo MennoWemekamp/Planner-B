@@ -76,9 +76,7 @@ async function calculator(prod, numb) {
     // add cycles to object
     product.cycles = Math.ceil(numb / productData.amount);
     // call addInputs to handle input calculation
-    addInputs(productData.input, numb);
-    // add product ot output display, if it already exists increase the cycles.
-    // TODO figure out why high-tech parts is not calculation inputs correctly
+    addInputs(productData.input, product.cycles);
     // check if product already exists in outputDisplay
     let found = false;
     let productIndex;
@@ -99,10 +97,10 @@ async function calculator(prod, numb) {
   }
 
   // this function checks for inputs and then adds those to the outputDisplay if required
-  function addInputs(inputs, numb) {
+  function addInputs(inputs, cycles) {
     for (input of inputs) {
       if (input.amount && input.amount !== "Placed") {
-        addProduct(input.name, input.amount * numb);
+        addProduct(input.name, input.amount * cycles);
       }
     }
   }

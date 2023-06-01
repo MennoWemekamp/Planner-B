@@ -42,28 +42,25 @@ It is an app that a user can select one final product, and how many of said prod
 
    [Visual Studio Code](https://code.visualstudio.com/)
 
-## Steps to be done for v0.3
+## Steps to be done for v0.x
 
-1. Calculate the required inputs more then one step deep in the production chain. For example, when calculating composites it will stop before it will list the number of factories required to make the required steel bars.
+1. finish UI
+2. finish aside tabs
 
 ## Steps for future versions
 
-1. refactor js code
-2. finish ui
-3. finish asside tabs
+1. refactor JS code
 
 ## Summary of the project
 
-- To create a usable calculator to calculation production chain in the game "Plan B".
+- To create a usable calculator to calculate production chains in the game "Plan B: Terraform".
 - To learn the basics of coming up with and executing a project.
 - Practicing with the languages and tech used to build the project.
 
 ## potential features
 
-Group the options in the select dropdown using `optgroup` instead of JSON objects
-Make sure the calculator functions handles mineral inputs
-Calculating the entire production chain instead of just one step
-Calculating multiple product requests
-Merging multiple requests into a single output display
-Query history
-admin platform for data updating
+- Group the options in the select dropdown using `optgroup` instead of JSON objects
+- Calculating multiple product requests
+- Merging multiple requests into a single output display
+- Query history
+- admin platform for data updating
