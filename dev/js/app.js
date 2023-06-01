@@ -78,10 +78,24 @@ async function calculator(prod, numb) {
     // call addInputs to handle input calculation
     addInputs(productData.input, numb);
     // add product ot output display, if it already exists increase the cycles.
-    // TODO figure out how to check if a product exists, I dont know how to set up a condition for this yet
     // TODO figure out why high-tech parts is not calculation inputs correctly
-    console.log("product", product);
-    outputDisplay.unshift(product);
+    // check if product already exists in outputDisplay
+    let found = false;
+    let productIndex;
+    outputDisplay.forEach((item, i) => {
+      if (prod === item.name) {
+        found = true;
+        productIndex = i;
+      }
+    });
+
+    if (found) {
+      // add cycles to already existing cycles
+      outputDisplay[productIndex].cycles += product.cycles;
+    } else {
+      // add object to outputDisplay
+      outputDisplay.unshift(product);
+    }
   }
 
   // this function checks for inputs and then adds those to the outputDisplay if required
