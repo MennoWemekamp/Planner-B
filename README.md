@@ -1,5 +1,7 @@
 # Planner-B
 
+_Published on github pages_
+
 This is a calculator for the game [Plan B: Terraform](https://store.steampowered.com/app/1894430/Plan_B_Terraform/)
 
 It is an app that a user can select one final product, and how many of said product they want per year, it will then display the entire production chain from raw resource to requested amount of final product with every step in between.
