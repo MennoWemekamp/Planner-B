@@ -1,4 +1,4 @@
-# Planner-B 🐈
+# Planner-B
 
 This is a calculator for the game [Plan B: Terraform](https://store.steampowered.com/app/1894430/Plan_B_Terraform/)
 
