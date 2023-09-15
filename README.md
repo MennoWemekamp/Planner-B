@@ -1,51 +1,47 @@
-# Planner-B
+# Astro Starter Kit: Minimal
 
-This is a calculator for the game [Plan B: Terraform](https://store.steampowered.com/app/1894430/Plan_B_Terraform/)
+```sh
+npm create astro@latest -- --template minimal
+```
 
-It is an app that a user can select one final product, and how many of said product they want per year, it will then display the entire production chain from raw resource to requested amount of final product with every step in between.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-## Features
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- Calculator
+## 🚀 Project Structure
 
-## Tech stack
+Inside of your Astro project, you'll see the following folders and files:
 
-1. Interface:
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-   - HTML
-   - CSS
-   - JavaScript
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-1. Calculations:
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-   - JavaScript
+Any static assets, like images, can be placed in the `public/` directory.
 
-1. Data Storage:
+## 🧞 Commands
 
-   - JSON file
+All commands are run from the root of the project, from a terminal:
 
-1. Webserver:
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-   - Git page server
+## 👀 Want to learn more?
 
-1. Framework
-
-   - [Astro](https://astro.build/)
-
-1. Other tech:
-
-   - Git, GitHub for version control
-
-   [GitHub](https://github.com/)
-
-1. Development:
-
-   - Visual Studio Code
-
-   [Visual Studio Code](https://code.visualstudio.com/)
-
-## Summary of the project
-
-- To create a usable calculator to calculate production chains in the game "Plan B: Terraform".
-- To learn the basics of coming up with and executing a project.
-- Practicing with the languages and tech used to build the project.
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
