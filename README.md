@@ -28,6 +28,10 @@ It is an app that a user can select one final product, and how many of said prod
 
    - Git page server
 
+1. Framework
+
+   - Astro
+
 1. Other tech:
 
    - Git, GitHub for version control
