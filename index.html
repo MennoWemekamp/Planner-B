@@ -13,60 +13,58 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header class="flex top-bar col-c">
-      <a href="#" class="col-a title">Planner-B</a>
-      <nav class="flex nav-buttons flex-gap">
-        <div class="button col-a">about</div>
+  <body class="body">
+    <header class="flex flex--space-between section section--margin-b-s">
+      <a href="#" class="header__title button button--active">Planner-B</a>
+      <nav class="flex flex--gap">
+        <div class="button button--active">about</div>
         <div class="button">instruction</div>
         <div class="button">recipes</div>
       </nav>
     </header>
-    <div class="flex main-display flex-gap">
-      <main>
-        <div class="col-c input-display">
-          <div class="flex input-products">
-            <div class="flex flex-gap">
-              <div class="col-a">1</div>
-              <select class="input" id="inp-product" name="inp-product">
-                <!-- input build area -->
-              </select>
+    <div class="flex flex--gap">
+      <main class="main">
+        <div class="section section--margin-b-s">
+          <div class="flex flex--space-between">
+            <div class="flex flex--gap">
+              <div class="button button--active">1</div>
+              <select class="input" id="inp-product" name="inp-product"></select>
               <!-- value set to 30 for testing JS, set back to 0 -->
               <input
-                value="30"
-                class="input inp-number"
+                value="0"
+                class="input input-product__number"
                 type="number"
                 id="inp-number"
               />
             </div>
-            <button class="button inp-remove">-</button>
+            <button class="button">-</button>
           </div>
-          <div class="flex flex-gap input-buttons">
-            <button class="button inp-button">add product</button>
-            <button class="button inp-button">reset</button>
-            <button class="button inp-button" id="calculate">calculate</button>
+          <div class="flex flex--gap input-buttons">
+            <button class="button">add product</button>
+            <button class="button">reset</button>
+            <button class="button" id="calculate">calculate</button>
           </div>
         </div>
-        <div class="output-display col-c" id="output-display">
+        <div class="section" id="output-display">
       </main>
-      <aside class="col-c">
-        <h3>About</h3>
-        <p>
+      <aside class="section info">
+        <h3 class="info__title">About</h3>
+        <p class="info__text">
           This is a calculator to help plan production lines in the game
-          <a href="https://store.steampowered.com/app/1894430/Plan_B_Terraform/"
+          <a class="info__link" href="https://store.steampowered.com/app/1894430/Plan_B_Terraform/"
             >Plan B: Terraform</a
           >
         </p>
-        <p>
+        <p class="info__text">
           It allows you to quickly plan out production lines and get an idea of
           what buildings and resources are needed.
         </p>
-        <p>
+        <p class="info__text">
           It was written by
-          <a href="https://github.com/MennoWemekamp">Menno Wemekamp</a>.
+          <a class="info__link" href="https://github.com/MennoWemekamp">Menno Wemekamp</a>.
         </p>
-        <p>
-          Version: <a href="https://github.com/MennoWemekamp/Planner-B">0.9</a>
+        <p class="info__text">
+          Version: <a class="info__link" href="https://github.com/MennoWemekamp/Planner-B">0.9</a>
         </p>
       </aside>
     </div>

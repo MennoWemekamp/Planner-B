@@ -125,20 +125,23 @@ async function createOutput(arr) {
   const data = importData.outputs;
   // create a div for the table of a product and append to output-display
   const prodDiv = document.createElement("div");
-  prodDiv.id = "prod-n";
+  prodDiv.classList.add("product");
   outputDiv.appendChild(prodDiv);
   // create and append title
   const prodTitle = document.createElement("h3");
   prodTitle.innerHTML = `Product 1: ${arr[0].name}`;
+  prodTitle.classList.add("product__title");
   prodDiv.appendChild(prodTitle);
   // create and append table
   const prodTable = document.createElement("table");
-  prodTable.id = "prod-table";
+  prodTable.classList.add("product-table");
   prodDiv.appendChild(prodTable);
   // create and append table head
   const tHead = document.createElement("thead");
+  tHead.classList.add("product-table__head");
   prodTable.appendChild(tHead);
   const tHeadRow = document.createElement("tr");
+  tHeadRow.classList.add("product-table__row", "product-table__row--head");
   tHead.appendChild(tHeadRow);
   const tHeadCell1 = document.createElement("th");
   tHeadCell1.setAttribute("colspan", "2");
@@ -206,17 +209,17 @@ async function createOutput(arr) {
     let dataCells = "";
     function numCol(num) {
       if (inputs[0] && inputs[1]) {
-        dataCells += `<td class="num-col" rowspan="2">${num}</td>`;
+        dataCells += `<td class="product-table--number-col" rowspan="2">${num}</td>`;
       } else {
-        dataCells += `<td class="num-col">${num}</td>`;
+        dataCells += `<td class="product-table--number-col">${num}</td>`;
       }
     }
     function iconCol(icon, bgcolor, name) {
       if (inputs[0] && inputs[1]) {
-        dataCells += `<td class="icon-col" rowspan="2">
-      <span class="icon-span"><img class="icon-img" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+        dataCells += `<td class="product-table--icon-col" rowspan="2">
+      <span class="icon-span"><img class="product-table__icon" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
       } else {
-        dataCells += `<td class="icon-col"><span class="icon-span"><img class="icon-img" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+        dataCells += `<td class="product-table--icon-col"><span class="icon-span"><img class="product-table__icon" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
       }
     }
     // create building column
@@ -227,7 +230,7 @@ async function createOutput(arr) {
     iconCol(outputIcon, outputColor, obj.name);
     // create input column, rowspan for dual inputs
     if (inputs[0] && inputs[1]) {
-      dataCells += `<td class="num-col">${inputs[0].amount}</td><td class="icon-col"><span class="icon-span"><img class="icon-img" src="img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr><td class="num-col">${inputs[1].amount}</td><td class="icon-col"><span class="icon-span"><img class="icon-img" src="img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
+      dataCells += `<td class="product-table--number-col">${inputs[0].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr class="product-table__row"><td class="product-table--number-col">${inputs[1].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
     } else if (inputs[0].amount) {
       numCol(inputs[0].amount);
       iconCol(inputs[0].icon, inputs[0].color, inputs[0].name);
@@ -235,7 +238,7 @@ async function createOutput(arr) {
       dataCells += `<td colspan="2">Placed ${inputs[0].name}</td>`;
     }
     // add td's to tr and tr to rows array
-    let rowStart = "<tr>";
+    let rowStart = "<tr class='product-table__row'>";
     let rowEnd = "</tr>";
     rows += `${rowStart}${dataCells}${rowEnd}`;
   }

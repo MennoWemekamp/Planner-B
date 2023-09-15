@@ -1,15 +1,4 @@
-/*
-TODO:
- - make git repo
- - need to figure out how to deal with the dual output of the metal waste recipe
- - Information/instruction section should include that waste will be a future feature and is not taken into acount for now.
- - credit icons
-
-
-Questions for Josey:
- -
-
-*/
+/* ---- Reset and Variables ---- */
 
 * {
   margin: 0;
@@ -23,49 +12,62 @@ Questions for Josey:
   --accent-color: rgb(249, 247, 253);
   --page-color: rgb(68, 68, 68);
   --text-accent-color: rgb(238, 0, 0);
-  --h1-color: white;
-  --h2-color: black;
+  --color-white: white;
+  --color-black: black;
 }
 
-a {
-  color: var(--text-accent-color);
-  font-weight: bold;
-  text-decoration: none;
+/* ---- Flex ---- */
+
+.flex {
+  display: flex;
 }
 
-a:visited {
-  color: var(--text-accent-color);
+.flex--col {
+  flex-direction: column;
 }
 
-a:hover {
-  opacity: 0.7;
+.flex--gap {
+  gap: 5px;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+/* ---- Mixes ---- */
+
+.section {
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.section--margin-b-s {
+  margin-bottom: 5px;
 }
 
 .button {
   background-color: var(--secondary-color);
-  color: white;
+  color: var(--color-white);
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   font-family: "Roboto", sans-serif;
 }
 
-.col-a {
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-weight: 700;
-}
-
 .button:hover {
   background-color: var(--primary-color);
 }
 
+.button--active {
+  background-color: var(--primary-color);
+  font-weight: 700;
+}
+
 .input {
   border: solid 3px var(--secondary-color);
-  color: black;
-  background-color: white;
+  color: var(--color-black);
+  background-color: var(--color-white);
   border-radius: 5px;
   padding: 5px 10px;
   font-family: "Roboto Condensed", sans-serif;
@@ -80,11 +82,13 @@ a:hover {
 }
 
 .input::placeholder {
-  color: black;
+  color: var(--color-black);
   text-align: center;
 }
 
-body {
+/* ---- ---- */
+
+.body {
   background-color: var(--page-color);
   max-width: 80vw;
   margin: auto;
@@ -92,77 +96,34 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-h1,
-h2,
-h3,
-.title {
-  font-family: "Roboto", sans-serif;
+/* ---- ---- */
+
+.header__title {
+  text-decoration: none;
 }
 
-.col-c {
-  background-color: var(--accent-color);
-  border-radius: 5px;
-  padding: 10px;
+/* ---- ---- */
+
+.main {
+  flex: 1 0;
 }
 
-.flex {
-  display: flex;
-}
+/* ---- ---- */
 
-.flex-gap {
-  gap: 5px;
-}
-
-.top-bar,
-.input-products {
-  justify-content: space-between;
-}
-
-/* ----- HEADER -----*/
-
-.title,
-.title:visited,
-.title:hover {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-/* ----- INPUT ---- */
-
-.inp-number {
+.input-product__number {
   width: 100px;
 }
+
+/* ---- ---- */
 
 .input-buttons {
   justify-content: center;
   margin-top: 5px;
 }
 
-main {
-  flex: 1 0;
-}
+/* ---- ---- */
 
-aside {
-  flex: 0 0 20vw;
-}
-
-.main-display {
-  margin-top: 5px;
-}
-
-.input-display {
-  margin-bottom: 5px;
-}
-
-/* ----- Output ----- */
-
-.output-display h3 {
-  text-align: center;
-  margin-block: 10px;
-  color: var(--primary-color);
-}
-
-.output-display div {
+.product {
   border-top: solid 1px var(--page-color);
   border-left: solid 1px var(--page-color);
   border-radius: 5px;
@@ -171,68 +132,78 @@ aside {
   margin-bottom: 10px;
 }
 
-.output-display table {
+.product__title {
+  text-align: center;
+  margin-block: 10px;
+  color: var(--primary-color);
+}
+
+/* ---- ---- */
+
+.product-table {
   width: 90%;
   text-align: center;
   margin: auto;
-  border-radius: 5px;
   border-collapse: collapse;
 }
 
-.output-display thead {
+.product-table__head {
   background-color: var(--secondary-color);
-  color: var(--h1-color);
+  color: var(--color-white);
   font-family: "Roboto", sans-serif;
-  text-transform: capitalize;
+  height: 20;
 }
 
-.output-display tr {
+.product-table__row {
   border-top: 1px solid var(--secondary-color);
+  height: 42px;
 }
 
-.output-display td {
-  padding-block: 5px;
+.product-table__row--head {
+  height: 20px;
 }
 
-.num-col {
+.product-table--number-col {
   text-align: right;
   padding-right: 2px;
 }
 
-.icon-col {
+.product-table--icon-col {
   text-align: left;
   padding-left: 2px;
 }
 
-.icon-img {
+.product-table__icon {
   height: 2em;
   vertical-align: middle;
   border-radius: 5px;
-  background-color: #ffffff;
 }
 
-.temp-steel {
-  background-color: #5e7682;
+/* ---- ---- */
+
+.info {
+  flex: 0 0 20vw;
 }
 
-.steel-bar {
-  background-color: #9bb8c7;
+.info__title {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
-.nitrogen {
-  background-color: #f8c471;
-}
-
-.iron-ore {
-  background-color: #f4684e;
-}
-
-/* ----- Sidebar ----- */
-
-aside p {
+.info__text {
   margin: 10px 5px;
 }
 
-aside h3 {
-  text-align: center;
+.info__link {
+  color: var(--text-accent-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.info__link:visited {
+  color: var(--text-accent-color);
+}
+
+.info__link:hover {
+  opacity: 0.7;
 }
