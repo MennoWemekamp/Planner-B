@@ -30,7 +30,7 @@ It is an app that a user can select one final product, and how many of said prod
 
 1. Framework
 
-   - Astro
+   - [Astro](https://astro.build/)
 
 1. Other tech:
 
