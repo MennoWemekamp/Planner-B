@@ -77,7 +77,7 @@ import "../css/style.css"
 // Make the fetch assign the json to global variable
 	async function importData() {
 	  // fetch json file
-	  const promise = await fetch("./data/outputs.json");
+	  const promise = await fetch("/Planner-B/data/outputs.json");
 	  // assign the result of the .json method
 	  const theData = await promise.json();
 	  return theData;
@@ -292,9 +292,9 @@ import "../css/style.css"
 		function iconCol(icon, bgcolor, name) {
 		  if (inputs[0] && inputs[1]) {
 			dataCells += `<td class="product-table--icon-col" rowspan="2">
-		  <span class="icon-span"><img class="product-table__icon" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+		  <span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
 		  } else {
-			dataCells += `<td class="product-table--icon-col"><span class="icon-span"><img class="product-table__icon" src="img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+			dataCells += `<td class="product-table--icon-col"><span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
 		  }
 		}
 		// create building column
@@ -305,7 +305,7 @@ import "../css/style.css"
 		iconCol(outputIcon, outputColor, obj.name);
 		// create input column, rowspan for dual inputs
 		if (inputs[0] && inputs[1]) {
-		  dataCells += `<td class="product-table--number-col">${inputs[0].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr class="product-table__row"><td class="product-table--number-col">${inputs[1].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
+		  dataCells += `<td class="product-table--number-col">${inputs[0].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr class="product-table__row"><td class="product-table--number-col">${inputs[1].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
 		} else if (inputs[0].amount) {
 		  numCol(inputs[0].amount);
 		  iconCol(inputs[0].icon, inputs[0].color, inputs[0].name);
