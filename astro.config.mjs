@@ -2,6 +2,6 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://MennoWemekamp/github.io",
+  site: "https://MennoWemekamp.github.io",
   base: "/Planner-B",
 });
