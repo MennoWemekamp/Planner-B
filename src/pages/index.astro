@@ -174,23 +174,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     const data = importData.outputs;
     // create a div for the table of a product and append to output-display
     const prodDiv = document.createElement("div");
-    prodDiv.classList.add("product");
+    prodDiv.classList.add(
+      "border-t-2",
+      "border-l-2",
+      "border-background",
+      "rounded-2",
+      "bg-accent",
+      "shadow-[2px_2px_2px_rgb(249,247,253)]",
+      "mb-4",
+    );
     outputDiv.appendChild(prodDiv);
     // create and append title
     const prodTitle = document.createElement("h3");
     prodTitle.innerHTML = `Product 1: ${arr[0].name}`;
-    prodTitle.classList.add("product__title");
+    prodTitle.classList.add("text-center", "my-3", "text-primary");
     prodDiv.appendChild(prodTitle);
     // create and append table
     const prodTable = document.createElement("table");
-    prodTable.classList.add("product-table");
+    prodTable.classList.add(
+      "w-4/5",
+      "text-center",
+      "m-auto",
+      "border-collapse",
+    );
     prodDiv.appendChild(prodTable);
     // create and append table head
     const tHead = document.createElement("thead");
-    tHead.classList.add("product-table__head");
+    tHead.classList.add("bg-secondary", "text-text", "font-roboto", "h-5");
     prodTable.appendChild(tHead);
     const tHeadRow = document.createElement("tr");
-    tHeadRow.classList.add("product-table__row", "product-table__row--head");
+    tHeadRow.classList.add("border-t-2", "border-secondary", "h-5");
     tHead.appendChild(tHeadRow);
     const tHeadCell1 = document.createElement("th");
     tHeadCell1.setAttribute("colspan", "2");
@@ -258,17 +271,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       let dataCells = "";
       function numCol(num) {
         if (inputs[0] && inputs[1]) {
-          dataCells += `<td class="product-table--number-col" rowspan="2">${num}</td>`;
+          dataCells += `<td class="text-right pr-2" rowspan="2">${num}</td>`;
         } else {
-          dataCells += `<td class="product-table--number-col">${num}</td>`;
+          dataCells += `<td class="text-right pr-2">${num}</td>`;
         }
       }
       function iconCol(icon, bgcolor, name) {
         if (inputs[0] && inputs[1]) {
-          dataCells += `<td class="product-table--icon-col" rowspan="2">
-        <span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+          dataCells += `<td class="text-left pr-2" rowspan="2">
+        <span><img class="h-8 align-middle rounded-md" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
         } else {
-          dataCells += `<td class="product-table--icon-col"><span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+          dataCells += `<td class="text-left pr-2"><span><img class="h-8 align-middle rounded-md" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
         }
       }
       // create building column
@@ -279,7 +292,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       iconCol(outputIcon, outputColor, obj.name);
       // create input column, rowspan for dual inputs
       if (inputs[0] && inputs[1]) {
-        dataCells += `<td class="product-table--number-col">${inputs[0].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr class="product-table__row"><td class="product-table--number-col">${inputs[1].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
+        dataCells += `<td class="text-right pr-2">${inputs[0].amount}</td><td class="text-left pr-2"><span><img class="h-8 align-middle rounded-md" src="/Planner-B/img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr class="border-t-2 border-secondary h-16"><td class="text-right pr-2">${inputs[1].amount}</td><td class="text-left pr-2"><span><img class="h-8 align-middle rounded-md" src="/Planner-B/img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
       } else if (inputs[0].amount) {
         numCol(inputs[0].amount);
         iconCol(inputs[0].icon, inputs[0].color, inputs[0].name);
@@ -287,7 +300,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         dataCells += `<td colspan="2">Placed ${inputs[0].name}</td>`;
       }
       // add td's to tr and tr to rows array
-      let rowStart = "<tr class='product-table__row'>";
+      let rowStart = "<tr class='border-t-2 border-secondary h-16'>";
       let rowEnd = "</tr>";
       rows += `${rowStart}${dataCells}${rowEnd}`;
     }
