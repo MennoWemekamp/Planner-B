@@ -1,324 +1,298 @@
 ---
-import "../css/style.css"
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planner B</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="body">
-    <header class="flex flex--space-between section section--margin-b-s">
-      <a href="#" class="header__title button button--active">Planner-B</a>
-      <nav class="flex flex--gap">
-        <div class="button button--active">about</div>
-        <div class="button">instruction</div>
-        <div class="button">recipes</div>
-      </nav>
-    </header>
-    <div class="flex flex--gap">
-      <main class="main">
-        <div class="section section--margin-b-s">
-          <div class="flex flex--space-between">
-            <div class="flex flex--gap">
-              <div class="button button--active">1</div>
-              <select class="input" id="inp-product" name="inp-product"></select>
-              <!-- value set to 30 for testing JS, set back to 0 -->
-              <input
-                value="0"
-                class="input input-product__number"
-                type="number"
-                id="inp-number"
-              />
-            </div>
-            <button class="button">-</button>
+<BaseLayout>
+  <main class="flex-grow">
+    <div class="mb-2 rounded-md bg-accent p-3">
+      <div class="flex justify-between">
+        <div class="flex gap-2">
+          <div class="font-roboto rounded-md bg-primary px-2 py-1 text-text">
+            1
           </div>
-          <div class="flex flex--gap input-buttons">
-            <button class="button">add product</button>
-            <button class="button">reset</button>
-            <button class="button" id="calculate">calculate</button>
-          </div>
-        </div>
-        <div class="section" id="output-display">
-      </main>
-      <aside class="section info">
-        <h3 class="info__title">About</h3>
-        <p class="info__text">
-          This is a calculator to help plan production lines in the game
-          <a class="info__link" href="https://store.steampowered.com/app/1894430/Plan_B_Terraform/"
-            >Plan B: Terraform</a
+          <select
+            class="font-condensed rounded-md border-2 border-secondary px-3 py-2 text-background hover:border-primary"
+            id="inp-product"
+            name="inp-product"
           >
-        </p>
-        <p class="info__text">
-          It allows you to quickly plan out production lines and get an idea of
-          what buildings and resources are needed.
-        </p>
-        <p class="info__text">
-          It was written by
-          <a class="info__link" href="https://github.com/MennoWemekamp">Menno Wemekamp</a>.
-        </p>
-        <p class="info__text">
-          Version: <a class="info__link" href="https://github.com/MennoWemekamp/Planner-B">1.0-astro</a>
-        </p>
-      </aside>
+          </select>
+          <input
+            value="0"
+            class="font-condensed w-32 rounded-md border-2 border-secondary px-3 py-2 text-background hover:border-primary"
+            type="number"
+            id="inp-number"
+          />
+        </div>
+        <button
+          class="font-roboto rounded-md bg-secondary px-2 py-1 text-text hover:bg-primary hover:text-background"
+          >-</button
+        >
+      </div>
+      <div class="mt-2 flex justify-center gap-2">
+        <button
+          class="font-roboto rounded-md bg-secondary px-2 py-1 text-text hover:bg-primary hover:text-background"
+          >add product</button
+        >
+        <button
+          class="font-roboto rounded-md bg-secondary px-2 py-1 text-text hover:bg-primary hover:text-background"
+          >reset</button
+        >
+        <button
+          class="font-roboto rounded-md bg-secondary px-2 py-1 text-text hover:bg-primary hover:text-background"
+          id="calculate">calculate</button
+        >
+      </div>
     </div>
-  </body>
-</html>
+    <div class="rounded-md bg-accent p-3" id="output-display"></div>
+  </main>
+</BaseLayout>
 
 <script is:inline>
-// Make the fetch assign the json to global variable
-	async function importData() {
-	  // fetch json file
-	  const promise = await fetch("/Planner-B/data/outputs.json");
-	  // assign the result of the .json method
-	  const theData = await promise.json();
-	  return theData;
-	}
-	// assign the promise to variable, remember to call this in async function and assign it to a function scope variable using await.
-	const DATA = importData();
-	
-	// Build the input list
-	async function buildProductList(imp) {
-	  // make sure the promise is fulfilled
-	  const data = await imp;
-	  let productList = "";
-	  // build the product list
-	  data.outputs.forEach((element) => {
-		productList += `<option value="${element.name}">${element.name}</option>`;
-	  });
-	  // render the product list
-	  document.getElementById("inp-product").innerHTML = productList;
-	}
-	buildProductList(DATA);
-	
-	// Get input from the user
-	// Targets
-	const product1 = document.getElementById("inp-product");
-	const number1 = document.getElementById("inp-number");
-	const calculate = document.getElementById("calculate");
-	// Event Listeners
-	calculate.addEventListener("click", handleCalculate);
-	// Event Handlers
-	async function handleCalculate() {
-	  // assign array with products to a variable called data
-	  const importData = await DATA;
-	  const data = importData.outputs;
-	  // Clear innerHTML and call calculator
-	  outputDiv.innerHTML = "";
-	  // get product object from data
-	  for (x of data) {
-		if (x.name === product1.value) {
-		  prod1 = x;
-		}
-	  }
-	  // check if product was valid before calling the calculator
-	  if (prod1.icon) {
-		calculator(product1.value, number1.value);
-	  } else {
-		outputDiv.innerHTML = "<h3>Select a product above to get started.</h3>";
-	  }
-	  // could be a way of handling mutliple inputs
-	  // calculator(product2.value, number2.value);
-	}
-	
-	// Do the calculation
-	async function calculator(prod, numb) {
-	  // assign array with products to a variable called data
-	  const importData = await DATA;
-	  const data = importData.outputs;
-	  // declare array to pass to display function
-	  let outputDisplay = [];
-	  // this function adds the product and cycles required to the outputDislay array
-	  function addProduct(prod, numb) {
-		// get object from data
-		let productData;
-		for (obj of data) {
-		  if (obj.name === prod) {
-			productData = obj;
-		  }
-		}
-		// object to be added to outputDisplay array
-		let product = {};
-		// add product name to object
-		product.name = prod;
-		// add cycles to object
-		product.cycles = Math.ceil(numb / productData.amount);
-		// call addInputs to handle input calculation
-		addInputs(productData.input, product.cycles);
-		// check if product already exists in outputDisplay
-		let found = false;
-		let productIndex;
-		outputDisplay.forEach((item, i) => {
-		  if (prod === item.name) {
-			found = true;
-			productIndex = i;
-		  }
-		});
-	
-		if (found) {
-		  // add cycles to already existing cycles
-		  outputDisplay[productIndex].cycles += product.cycles;
-		} else {
-		  // add object to outputDisplay
-		  outputDisplay.unshift(product);
-		}
-	  }
-	
-	  // this function checks for inputs and then adds those to the outputDisplay if required
-	  function addInputs(inputs, cycles) {
-		for (input of inputs) {
-		  if (input.amount && input.amount !== "Placed") {
-			addProduct(input.name, input.amount * cycles);
-		  }
-		}
-	  }
-	
-	  addProduct(prod, numb);
-	
-	  // Final step: clear output display and call output display function
-	  createOutput(outputDisplay);
-	}
-	
-	// output;
-	// declare variable for output div
-	const outputDiv = document.getElementById("output-display");
-	// set default output display content
-	outputDiv.innerHTML = "<h3>Select a product above to get started.</h3>";
-	// Write function that creates output html
-	// things to display for each on the objects in outputDisplay: number of buildings, total amount they output, total amount of input needed.
-	async function createOutput(arr) {
-	  //assign array with products to a variable called data
-	  const importData = await DATA;
-	  const data = importData.outputs;
-	  // create a div for the table of a product and append to output-display
-	  const prodDiv = document.createElement("div");
-	  prodDiv.classList.add("product");
-	  outputDiv.appendChild(prodDiv);
-	  // create and append title
-	  const prodTitle = document.createElement("h3");
-	  prodTitle.innerHTML = `Product 1: ${arr[0].name}`;
-	  prodTitle.classList.add("product__title");
-	  prodDiv.appendChild(prodTitle);
-	  // create and append table
-	  const prodTable = document.createElement("table");
-	  prodTable.classList.add("product-table");
-	  prodDiv.appendChild(prodTable);
-	  // create and append table head
-	  const tHead = document.createElement("thead");
-	  tHead.classList.add("product-table__head");
-	  prodTable.appendChild(tHead);
-	  const tHeadRow = document.createElement("tr");
-	  tHeadRow.classList.add("product-table__row", "product-table__row--head");
-	  tHead.appendChild(tHeadRow);
-	  const tHeadCell1 = document.createElement("th");
-	  tHeadCell1.setAttribute("colspan", "2");
-	  tHeadCell1.innerHTML = "Buildings";
-	  tHeadRow.appendChild(tHeadCell1);
-	  const tHeadCell2 = document.createElement("th");
-	  tHeadCell2.setAttribute("colspan", "2");
-	  tHeadCell2.innerHTML = "Output";
-	  tHeadRow.appendChild(tHeadCell2);
-	  const tHeadCell3 = document.createElement("th");
-	  tHeadCell3.setAttribute("colspan", "2");
-	  tHeadCell3.innerHTML = "Inputs";
-	  tHeadRow.appendChild(tHeadCell3);
-	  // create and append table body
-	  const tBody = document.createElement("tbody");
-	  prodTable.appendChild(tBody);
-	
-	  // create Table rows for each obj in arr
-	  let rows = "";
-	  for (obj of arr) {
-		// get product object from data
-		let prod;
-		for (x of data) {
-		  if (x.name === obj.name) {
-			prod = x;
-		  }
-		}
-		// get buildings required
-		const buildingNum = Math.ceil(obj.cycles / prod.cycles);
-		const buildingType = prod.building;
-		// get data about the building
-		let building;
-		for (y of data) {
-		  if (y.name === prod.building) {
-			building = y;
-		  }
-		}
-		const buildingIcon = building.icon;
-		const buildingColor = building.bgcolor;
-		// get output amount
-		const outputAmount = obj.cycles * prod.amount;
-		const outputIcon = prod.icon;
-		const outputColor = prod.bgcolor;
-		// get inputs and build an array with input objects
-		let inputs = [];
-		for (inp of prod.input)
-		  if (inp.amount) {
-			// compare the input names to the JSON and pull icon and bgcolor from that object in the JSON and then use that to build the table row later.
-			let input = {};
-			input.name = inp.name;
-			input.amount = obj.cycles * inp.amount;
-			// grap data for the inputs from json
-			let inputData;
-			for (w of data) {
-			  if (w.name === inp.name) {
-				inputData = w;
-				input.icon = inputData.icon;
-				input.color = inputData.bgcolor;
-			  }
-			}
-			// add input object to array of inputs
-			inputs.push(input);
-		  }
-		// build each td using the const above
-		let dataCells = "";
-		function numCol(num) {
-		  if (inputs[0] && inputs[1]) {
-			dataCells += `<td class="product-table--number-col" rowspan="2">${num}</td>`;
-		  } else {
-			dataCells += `<td class="product-table--number-col">${num}</td>`;
-		  }
-		}
-		function iconCol(icon, bgcolor, name) {
-		  if (inputs[0] && inputs[1]) {
-			dataCells += `<td class="product-table--icon-col" rowspan="2">
-		  <span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
-		  } else {
-			dataCells += `<td class="product-table--icon-col"><span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
-		  }
-		}
-		// create building column
-		numCol(buildingNum);
-		iconCol(buildingIcon, buildingColor, buildingType);
-		// create output column
-		numCol(outputAmount);
-		iconCol(outputIcon, outputColor, obj.name);
-		// create input column, rowspan for dual inputs
-		if (inputs[0] && inputs[1]) {
-		  dataCells += `<td class="product-table--number-col">${inputs[0].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr class="product-table__row"><td class="product-table--number-col">${inputs[1].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
-		} else if (inputs[0].amount) {
-		  numCol(inputs[0].amount);
-		  iconCol(inputs[0].icon, inputs[0].color, inputs[0].name);
-		} else {
-		  dataCells += `<td colspan="2">Placed ${inputs[0].name}</td>`;
-		}
-		// add td's to tr and tr to rows array
-		let rowStart = "<tr class='product-table__row'>";
-		let rowEnd = "</tr>";
-		rows += `${rowStart}${dataCells}${rowEnd}`;
-	  }
-	
-	  // Set inner html
-	  tBody.innerHTML = rows;
-	}
-	</script>
+  // Make the fetch assign the json to global variable
+  async function importData() {
+    // fetch json file
+    const promise = await fetch("/Planner-B/data/outputs.json");
+    // assign the result of the .json method
+    const theData = await promise.json();
+    return theData;
+  }
+  // assign the promise to variable, remember to call this in async function and assign it to a function scope variable using await.
+  const DATA = importData();
+
+  // Build the input list
+  async function buildProductList(imp) {
+    // make sure the promise is fulfilled
+    const data = await imp;
+    let productList = "";
+    // build the product list
+    data.outputs.forEach((element) => {
+      productList += `<option value="${element.name}">${element.name}</option>`;
+    });
+    // render the product list
+    document.getElementById("inp-product").innerHTML = productList;
+  }
+  buildProductList(DATA);
+
+  // Get input from the user
+  // Targets
+  const product1 = document.getElementById("inp-product");
+  const number1 = document.getElementById("inp-number");
+  const calculate = document.getElementById("calculate");
+  // Event Listeners
+  calculate.addEventListener("click", handleCalculate);
+  // Event Handlers
+  async function handleCalculate() {
+    // assign array with products to a variable called data
+    const importData = await DATA;
+    const data = importData.outputs;
+    // Clear innerHTML and call calculator
+    outputDiv.innerHTML = "";
+    // get product object from data
+    for (x of data) {
+      if (x.name === product1.value) {
+        prod1 = x;
+      }
+    }
+    // check if product was valid before calling the calculator
+    if (prod1.icon) {
+      calculator(product1.value, number1.value);
+    } else {
+      outputDiv.innerHTML = "<h3>Select a product above to get started.</h3>";
+    }
+    // could be a way of handling mutliple inputs
+    // calculator(product2.value, number2.value);
+  }
+
+  // Do the calculation
+  async function calculator(prod, numb) {
+    // assign array with products to a variable called data
+    const importData = await DATA;
+    const data = importData.outputs;
+    // declare array to pass to display function
+    let outputDisplay = [];
+    // this function adds the product and cycles required to the outputDislay array
+    function addProduct(prod, numb) {
+      // get object from data
+      let productData;
+      for (obj of data) {
+        if (obj.name === prod) {
+          productData = obj;
+        }
+      }
+      // object to be added to outputDisplay array
+      let product = {};
+      // add product name to object
+      product.name = prod;
+      // add cycles to object
+      product.cycles = Math.ceil(numb / productData.amount);
+      // call addInputs to handle input calculation
+      addInputs(productData.input, product.cycles);
+      // check if product already exists in outputDisplay
+      let found = false;
+      let productIndex;
+      outputDisplay.forEach((item, i) => {
+        if (prod === item.name) {
+          found = true;
+          productIndex = i;
+        }
+      });
+
+      if (found) {
+        // add cycles to already existing cycles
+        outputDisplay[productIndex].cycles += product.cycles;
+      } else {
+        // add object to outputDisplay
+        outputDisplay.unshift(product);
+      }
+    }
+
+    // this function checks for inputs and then adds those to the outputDisplay if required
+    function addInputs(inputs, cycles) {
+      for (input of inputs) {
+        if (input.amount && input.amount !== "Placed") {
+          addProduct(input.name, input.amount * cycles);
+        }
+      }
+    }
+
+    addProduct(prod, numb);
+
+    // Final step: clear output display and call output display function
+    createOutput(outputDisplay);
+  }
+
+  // output;
+  // declare variable for output div
+  const outputDiv = document.getElementById("output-display");
+  // set default output display content
+  outputDiv.innerHTML = "<h3>Select a product above to get started.</h3>";
+  // Write function that creates output html
+  // things to display for each on the objects in outputDisplay: number of buildings, total amount they output, total amount of input needed.
+  async function createOutput(arr) {
+    //assign array with products to a variable called data
+    const importData = await DATA;
+    const data = importData.outputs;
+    // create a div for the table of a product and append to output-display
+    const prodDiv = document.createElement("div");
+    prodDiv.classList.add("product");
+    outputDiv.appendChild(prodDiv);
+    // create and append title
+    const prodTitle = document.createElement("h3");
+    prodTitle.innerHTML = `Product 1: ${arr[0].name}`;
+    prodTitle.classList.add("product__title");
+    prodDiv.appendChild(prodTitle);
+    // create and append table
+    const prodTable = document.createElement("table");
+    prodTable.classList.add("product-table");
+    prodDiv.appendChild(prodTable);
+    // create and append table head
+    const tHead = document.createElement("thead");
+    tHead.classList.add("product-table__head");
+    prodTable.appendChild(tHead);
+    const tHeadRow = document.createElement("tr");
+    tHeadRow.classList.add("product-table__row", "product-table__row--head");
+    tHead.appendChild(tHeadRow);
+    const tHeadCell1 = document.createElement("th");
+    tHeadCell1.setAttribute("colspan", "2");
+    tHeadCell1.innerHTML = "Buildings";
+    tHeadRow.appendChild(tHeadCell1);
+    const tHeadCell2 = document.createElement("th");
+    tHeadCell2.setAttribute("colspan", "2");
+    tHeadCell2.innerHTML = "Output";
+    tHeadRow.appendChild(tHeadCell2);
+    const tHeadCell3 = document.createElement("th");
+    tHeadCell3.setAttribute("colspan", "2");
+    tHeadCell3.innerHTML = "Inputs";
+    tHeadRow.appendChild(tHeadCell3);
+    // create and append table body
+    const tBody = document.createElement("tbody");
+    prodTable.appendChild(tBody);
+
+    // create Table rows for each obj in arr
+    let rows = "";
+    for (obj of arr) {
+      // get product object from data
+      let prod;
+      for (x of data) {
+        if (x.name === obj.name) {
+          prod = x;
+        }
+      }
+      // get buildings required
+      const buildingNum = Math.ceil(obj.cycles / prod.cycles);
+      const buildingType = prod.building;
+      // get data about the building
+      let building;
+      for (y of data) {
+        if (y.name === prod.building) {
+          building = y;
+        }
+      }
+      const buildingIcon = building.icon;
+      const buildingColor = building.bgcolor;
+      // get output amount
+      const outputAmount = obj.cycles * prod.amount;
+      const outputIcon = prod.icon;
+      const outputColor = prod.bgcolor;
+      // get inputs and build an array with input objects
+      let inputs = [];
+      for (inp of prod.input)
+        if (inp.amount) {
+          // compare the input names to the JSON and pull icon and bgcolor from that object in the JSON and then use that to build the table row later.
+          let input = {};
+          input.name = inp.name;
+          input.amount = obj.cycles * inp.amount;
+          // grap data for the inputs from json
+          let inputData;
+          for (w of data) {
+            if (w.name === inp.name) {
+              inputData = w;
+              input.icon = inputData.icon;
+              input.color = inputData.bgcolor;
+            }
+          }
+          // add input object to array of inputs
+          inputs.push(input);
+        }
+      // build each td using the const above
+      let dataCells = "";
+      function numCol(num) {
+        if (inputs[0] && inputs[1]) {
+          dataCells += `<td class="product-table--number-col" rowspan="2">${num}</td>`;
+        } else {
+          dataCells += `<td class="product-table--number-col">${num}</td>`;
+        }
+      }
+      function iconCol(icon, bgcolor, name) {
+        if (inputs[0] && inputs[1]) {
+          dataCells += `<td class="product-table--icon-col" rowspan="2">
+        <span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+        } else {
+          dataCells += `<td class="product-table--icon-col"><span class="icon-span"><img class="product-table__icon" src="/Planner-B/img/${icon}" style="background-color:${bgcolor};" title="${name}" /></span></td>`;
+        }
+      }
+      // create building column
+      numCol(buildingNum);
+      iconCol(buildingIcon, buildingColor, buildingType);
+      // create output column
+      numCol(outputAmount);
+      iconCol(outputIcon, outputColor, obj.name);
+      // create input column, rowspan for dual inputs
+      if (inputs[0] && inputs[1]) {
+        dataCells += `<td class="product-table--number-col">${inputs[0].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[0].icon}" style="background-color:${inputs[0].color};" title="${inputs[0].name}" /></span></td></tr><tr class="product-table__row"><td class="product-table--number-col">${inputs[1].amount}</td><td class="product-table--icon-col"><span><img class="product-table__icon" src="/Planner-B/img/${inputs[1].icon}" style="background-color:${inputs[1].color};" title="${inputs[1].name}" /></span></td>`;
+      } else if (inputs[0].amount) {
+        numCol(inputs[0].amount);
+        iconCol(inputs[0].icon, inputs[0].color, inputs[0].name);
+      } else {
+        dataCells += `<td colspan="2">Placed ${inputs[0].name}</td>`;
+      }
+      // add td's to tr and tr to rows array
+      let rowStart = "<tr class='product-table__row'>";
+      let rowEnd = "</tr>";
+      rows += `${rowStart}${dataCells}${rowEnd}`;
+    }
+
+    // Set inner html
+    tBody.innerHTML = rows;
+  }
+</script>
